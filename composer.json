@@ -1,6 +1,6 @@
 {
-    "requiere": {
-        "slim/slim" : "2.*"
+    "require": {
+        "slim/slim": "3.*"
     },
 
     "autoload": {

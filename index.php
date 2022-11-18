@@ -2,14 +2,16 @@
 
 require_once 'vendor/autoload.php';
 
-$app = new \Slim\Slim();
+use\Slim\App;
+
+$app = new App();
 
 $app->get("/pruebas", function() use($app){
-    echo "Hola mundo desde Slim PHP";
+    echo "Hola Mundo desde el Slim de PHP";
 });
 
 $app->get("/probando", function() use($app){
-    echo "Otro texto desde Slim PHP";
+    echo "Otro texto Cualquiera";
 });
 
 $app->run();
