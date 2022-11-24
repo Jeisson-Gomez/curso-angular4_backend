@@ -17,6 +17,8 @@ class ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
+            'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
         ),
@@ -31,9 +33,19 @@ class ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/src',
+        ),
+        'Psr\\Http\\Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            1 => __DIR__ . '/..' . '/psr/http-server-handler/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -42,16 +54,6 @@ class ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'P' => 
-        array (
-            'Pimple' => 
-            array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
-            ),
         ),
     );
 
@@ -65,7 +67,6 @@ class ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitbdea503b6ef87cd08d701c72fffa72be::$classMap;
 
         }, null, ClassLoader::class);
